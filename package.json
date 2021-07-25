@@ -9,8 +9,8 @@
     "npm": ">=7"
   },
   "scripts": {
-    "prod": "WEBPACK_MODE=production webpack",
-    "dev": "WEBPACK_MODE=development webpack --watch"
+    "prod": "webpack --node-env=production",
+    "dev": "webpack --node-env=development --watch"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
