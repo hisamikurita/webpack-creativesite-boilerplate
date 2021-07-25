@@ -10,7 +10,7 @@ const { optimizeImage } = require('./.squooshrc');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 dotenv.config();
 
-const mode = process.env.WEBPACK_MODE;
+const mode = process.env.NODE_ENV;
 const srcRelativePath = process.env.WEBPACK_SRC_RELATIVE_PATH || 'src';
 const distRelativePath = process.env.WEBPACK_DIST_RELATIVE_PATH || 'dist';
 
