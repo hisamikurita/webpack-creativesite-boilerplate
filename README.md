@@ -9,6 +9,8 @@ A boilerplate for web creativesite, based on Webpack
 * Image Optimization (webp)
 * Browsersync
 
+![sample](https://user-images.githubusercontent.com/47776346/126886480-534b8b46-6534-4ad5-98ec-78e2b1633ec9.png)
+
 ## Usage
 * Clone repository<br>
 * Install Node.js<br>
