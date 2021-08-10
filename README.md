@@ -9,6 +9,51 @@ A boilerplate for web creativesite, based on Webpack
 * Image Optimization (webp)
 * Browsersync
 
+Directory structure
+
+├── dist
+│    │
+│    ├── assets/         
+│    │    │
+│    │    ├── images    
+│    │    │
+│    │    ├── script 
+│    │    │
+│    │    └── stylesheets
+│    │
+│    └── index.html 
+│
+├── src
+│    │
+│    ├── assets/         
+│    │    │
+│    │    ├── images    
+│    │    │
+│    │    ├── script ────────── module
+│    │    │                 └── shaders
+│    │    │                 └── utility
+│    │    │                 └── app.js
+│    │    │                 
+│    │    └── stylesheets
+│    │
+│    └── index.html 
+│
+├── .env-sample     
+│
+├── eslintrc.js 
+│
+├── gitignore
+│
+├── squooshrc.js      
+│
+├── stylelintrc.js         
+│
+├── package-lock.json          
+│
+├── package.json  
+│
+└── webpack.config.js  
+
 <img src="https://user-images.githubusercontent.com/47776346/126886480-534b8b46-6534-4ad5-98ec-78e2b1633ec9.png" width="600px">
 
 ## Usage
