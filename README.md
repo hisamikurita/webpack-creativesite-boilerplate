@@ -25,20 +25,17 @@ Directory structure
 │    │
 │    └── index.html 
 │
-├── src
-│    │
-│    ├── assets/         
-│    │    │
-│    │    ├── images    
-│    │    │
-│    │    ├── script ────────── module
-│    │    │                 └── shaders
-│    │    │                 └── utility
-│    │    │                 └── app.js
-│    │    │                 
-│    │    └── stylesheets
-│    │
-│    └── index.html 
+├── src ── assets/         
+│           │
+│           ├── images    
+│           │
+│           ├── script ────────── module
+│           │                 └── shaders
+│           │                 └── utility
+│           │                 └── app.js
+│           │                 
+│           └── stylesheets
+│    
 │
 ├── .env-sample     
 │
