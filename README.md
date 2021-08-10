@@ -12,7 +12,7 @@ A boilerplate for web creativesite, based on Webpack
 Directory structure
 
 ```
-...
+.
 ├── dist
 │    │
 │    ├── assets/         
