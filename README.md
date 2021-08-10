@@ -11,6 +11,8 @@ A boilerplate for web creativesite, based on Webpack
 
 Directory structure
 
+```
+...
 ├── dist
 │    │
 │    ├── assets/         
@@ -53,6 +55,7 @@ Directory structure
 ├── package.json  
 │
 └── webpack.config.js  
+```
 
 <img src="https://user-images.githubusercontent.com/47776346/126886480-534b8b46-6534-4ad5-98ec-78e2b1633ec9.png" width="600px">
 
