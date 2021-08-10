@@ -36,7 +36,6 @@ Directory structure
 │           │                 
 │           └── stylesheets
 │    
-│
 ├── .env-sample     
 │
 ├── eslintrc.js 
