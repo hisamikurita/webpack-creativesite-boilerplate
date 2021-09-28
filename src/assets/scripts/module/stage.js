@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import { Scene, PerspectiveCamera, WebGLRenderer, Vector3, GridHelper, AxesHelper, Color } from 'three'
 import Stats from 'stats-js';
 import OrbitControls from "three-orbitcontrols";
 
@@ -13,7 +13,7 @@ export default class Stage {
       fov: 45,
       near: 0.1,
       far: 100,
-      lookAt: new THREE.Vector3(0, 0, 0),
+      lookAt: new Vector3(0, 0, 0),
       x: 0,
       y: 0,
       z: 1.0,
@@ -36,13 +36,13 @@ export default class Stage {
   }
 
   _setScene() {
-    this.scene = new THREE.Scene();
+    this.scene = new Scene();
   }
 
   _setRender() {
-    this.renderer = new THREE.WebGLRenderer();
+    this.renderer = new WebGLRenderer();
     this.renderer.setPixelRatio(window.devicePixelRatio);
-    this.renderer.setClearColor(new THREE.Color(this.renderParam.clearColor));
+    this.renderer.setClearColor(new Color(this.renderParam.clearColor));
     this.renderer.setSize(this.renderParam.width, this.renderParam.height);
     const wrapper = document.querySelector("#webgl");
     wrapper.appendChild(this.renderer.domElement);
@@ -50,7 +50,7 @@ export default class Stage {
 
   _setCamera() {
     if (!this.isInitialized) {
-      this.camera = new THREE.PerspectiveCamera(
+      this.camera = new PerspectiveCamera(
         0,
         0,
         this.cameraParam.near,
@@ -77,8 +77,8 @@ export default class Stage {
   }
 
   _setDev() {
-    this.scene.add(new THREE.GridHelper(1000, 100));
-    this.scene.add(new THREE.AxesHelper(100));
+    this.scene.add(new GridHelper(1000, 100));
+    this.scene.add(new AxesHelper(100));
     this.orbitcontrols = new OrbitControls(
       this.camera,
       this.renderer.domElement,

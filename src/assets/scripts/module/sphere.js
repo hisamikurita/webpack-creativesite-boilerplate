@@ -1,10 +1,10 @@
-import * as THREE from 'three';
+import { SphereBufferGeometry, RawShaderMaterial, Mesh, Color } from 'three'
 import { gsap } from 'gsap';
 import * as dat from 'dat.gui';
 import vertexShader from '../shaders/vertexshader.vert';
 import fragmentShader from '../shaders/fragmentshader.frag';
 
-export default class Mesh {
+export default class Sphere {
   constructor(stage) {
     this.color = '#fff';
     this.stage = stage;
@@ -16,16 +16,16 @@ export default class Mesh {
   }
 
   _setMesh() {
-    const geometry = new THREE.SphereBufferGeometry(0.20, 32, 32);
-    const material = new THREE.RawShaderMaterial({
+    const geometry = new SphereBufferGeometry(0.20, 32, 32);
+    const material = new RawShaderMaterial({
       vertexShader: vertexShader,
       fragmentShader: fragmentShader,
       uniforms: {
         u_scale: { type: "f", value: 1.5 },
-        u_color: { type: "v3", value: new THREE.Color(this.color) },
+        u_color: { type: "v3", value: new Color(this.color) },
       },
     });
-    this.mesh = new THREE.Mesh(geometry, material);
+    this.mesh = new Mesh(geometry, material);
     this.stage.scene.add(this.mesh);
 
     gsap.to(this.mesh.material.uniforms.u_scale, {
@@ -43,7 +43,7 @@ export default class Mesh {
     gui.addColor(parameter, "color")
       .name("color")
       .onChange((value) => {
-        this.mesh.material.uniforms.u_color.value = new THREE.Color(value);
+        this.mesh.material.uniforms.u_color.value = new Color(value);
       });
   }
 
