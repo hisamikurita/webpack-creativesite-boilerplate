@@ -107,6 +107,10 @@ const config = {
         new CopyPlugin({
             patterns: [
                 {
+                    from: path.resolve(__dirname, `${srcRelativePath}/index.html`),
+                    to: path.resolve(__dirname, `${distRelativePath}/index.html`),
+                },
+                {
                     from: path.resolve(__dirname, `${srcRelativePath}/assets/images`),
                     to: 'images/[name][ext]',
                     noErrorOnMissing: true,
