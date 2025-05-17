@@ -59,7 +59,11 @@ Directory structure
 ## Usage
 * Clone repository<br>
 * Install Node.js<br>
-* Create an `.env` file and copy the contents of `.env-sample`. <br>
+* Create an `.env` file and copy the contents of `.env-sample`.
+```
+  cp .env-sample .env
+```
+
 * Run following commands<br>
 ```
   npm install
